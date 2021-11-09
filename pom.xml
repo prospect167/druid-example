@@ -54,6 +54,7 @@
             <artifactId>druid-spring-boot-starter</artifactId>
             <version>${druid.starter.version}</version>
         </dependency>
+        <!-- db end-->
 
         <!-- tools -->
         <dependency>

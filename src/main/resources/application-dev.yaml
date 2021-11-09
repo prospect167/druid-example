@@ -7,6 +7,13 @@ spring:
     url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: root
     password: 654321
+    # 开启监控服务
+    druid:
+      stat-view-servlet:
+        enabled: true
+        login-password: 654321
+        login-username: admin
+        url-pattern: /druid/*
 
 mybatis:
   mapper-locations: classpath:mappers/*.xml

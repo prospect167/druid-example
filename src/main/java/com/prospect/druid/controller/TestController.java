@@ -1,5 +1,6 @@
 package com.prospect.druid.controller;
 
+import com.alibaba.druid.stat.DruidStatManagerFacade;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,4 +18,8 @@ public class TestController {
         return "hello druid example";
     }
 
+    @GetMapping("/stat")
+    public Object stat() {
+        return DruidStatManagerFacade.getInstance().getDataSourceStatDataList();
+    }
 }
